@@ -34,6 +34,12 @@ int findPeakElement(vector<int>& nums) {
         // peak is in left
         // eliminate right
         else if(nums[mid]>nums[mid+1] && nums[mid]<nums[mid-1]) high = mid - 1;
+        // valley case
+        else{
+            // can go either side
+            // move to left
+            high = mid - 1;
+        }
     }
     return -1;
 }
