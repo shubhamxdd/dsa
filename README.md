@@ -25,6 +25,7 @@
 | 19 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | binary search/9find_peak_element.cpp | UNKNOWN |
 | 20 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | binary search/Binary search on answers/3koko_eating_bananas.cpp | UNKNOWN |
 | 21 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | binary search/Binary search on answers/4Minimum_Number_of_Days_to_Make_m_Bouquets.cpp | UNKNOWN |
+| 22 | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/) | binary search/Binary search on answers/3370_Smallest_Number_With_All_Set_Bits.cpp | UNKNOWN |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
