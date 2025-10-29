@@ -22,11 +22,11 @@ int findMaxElemVector(vector<int> vec){
     return max;
 }
 
-bool isPossibile(vector<int> bloomDay, int day, int m, int k){
+bool isPossible(vector<int> bloomDay, int day, int m, int k){
     int count = 0;
     int num_of_bouquets = 0;
 
-    for(int i = 0;i<bloomDay.size()-1;i++){
+    for(int i = 0;i<=bloomDay.size()-1;i++){
         if(bloomDay[i]<=day){
             // flower is bloomed 
             // increase counter
@@ -47,22 +47,32 @@ bool isPossibile(vector<int> bloomDay, int day, int m, int k){
 int minDays(vector<int> bloomDay, int m, int k){
     if(m*k>bloomDay.size()) return -1;
 
-    int min = findMinElemVector(bloomDay);
-    int max = findMaxElemVector(bloomDay);
+    int low = findMinElemVector(bloomDay);
+    int high = findMaxElemVector(bloomDay);
+    int ans = -1;
 
-    // run from min elem to max elem in array
-    for(int i = min;i<=max;i++){
-        if(isPossibile(bloomDay,i,m,k) == true){
-            return i;
+    while(high>=low){
+        int mid = (low+high)/2;
+        if(isPossible(bloomDay,mid,m,k) == true){
+            ans = mid;
+            // eliminate right
+            high = mid -1;
+
+        }else{
+            // eliminate left
+            low = mid + 1;
         }
     }
-    return -1;
+    return ans;
+
+
 }
 
 int main(){
-    vector<int> nums = {4,3,5,1,9,4};
+    // vector<int> nums = {4,3,5,1,9,4};
+    vector<int> nums = {1,10,3,10,2};
     // cout << findMinElemVector(nums) << endl;
     // cout << findMaxElemVector(nums) << endl;
-    cout << minDays(nums,3,2) << endl;
+    cout << minDays(nums,3,1) << endl;
     return 0;
 }
