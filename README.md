@@ -23,6 +23,7 @@
 | 17 | How Many Times Array Has Been Rotated (no direct LeetCode link) | binary search/7how_many_times_array_has_been_rotated.cpp | UNKNOWN |
 | 18 | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | binary search/8single_element_in_sorted_array.cpp | UNKNOWN |
 | 19 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | binary search/9find_peak_element.cpp | UNKNOWN |
+| 20 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/description/) | binary search/Binary search on answers/3koko_eating_bananas.cpp | UNKNOWN |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
