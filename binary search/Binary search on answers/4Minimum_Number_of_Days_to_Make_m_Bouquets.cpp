@@ -49,12 +49,12 @@ int minDays(vector<int> bloomDay, int m, int k){
 
     int low = findMinElemVector(bloomDay);
     int high = findMaxElemVector(bloomDay);
-    int ans = -1;
+    // int ans = -1;
 
     while(high>=low){
         int mid = (low+high)/2;
         if(isPossible(bloomDay,mid,m,k) == true){
-            ans = mid;
+            // ans = mid;
             // eliminate right
             high = mid -1;
 
@@ -63,7 +63,7 @@ int minDays(vector<int> bloomDay, int m, int k){
             low = mid + 1;
         }
     }
-    return ans;
+    return low;
 
 
 }
