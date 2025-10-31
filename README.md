@@ -27,6 +27,7 @@
 | 21 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | binary search/Binary search on answers/4Minimum_Number_of_Days_to_Make_m_Bouquets.cpp | UNKNOWN |
 | 22 | [Smallest Number With All Set Bits](https://leetcode.com/problems/smallest-number-with-all-set-bits/) |   3370_Smallest_Number_With_All_Set_Bits.cpp | UNKNOWN |
 | 22 | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/) | binary search/Binary search on answers/5smallest_divisor.cpp | UNKNOWN |
+| 22 | [The Two Sneaky Numbers of Digitville](https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville) | binary search/Binary search on answers/3289The_Two_Sneaky_Numbers_of_Digitville.cpp | UNKNOWN |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
