@@ -49,8 +49,27 @@ int shipWithinDaysBrute(vector<int>& weights, int days){
     return sum;
 }
 
+int shipWithinDays(vector<int> &weights, int days){
+    int low = findLargestInVector(weights);
+    int high = findSumOfVector(weights);
+
+    while(high>=low){
+        int mid = (low+high)/2;
+        int daysTaken = calculateDaysTaken(weights, mid);
+
+        if(daysTaken<=days){
+            // eliminate right as it is a possible answer and we need to find small
+            high = mid -1;
+        }else {
+            low = mid + 1;
+        }
+    }
+    return low;
+}
+
 int main(){
     vector<int> nums = {1,2,3,4,5,6,7,8,9,10};
-    cout << shipWithinDaysBrute(nums,5) << endl;
+    // cout << shipWithinDaysBrute(nums,5) << endl;
+    cout << shipWithinDays(nums,5) << endl;
     return 0;
 }
