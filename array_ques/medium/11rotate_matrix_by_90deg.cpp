@@ -46,11 +46,12 @@ void better(vector<vector<int>> &matrix){
         }
     }
 
+    // if only need to transpose dont run this loop
     for (int i = 0; i < n; i++){
         // reverse(matrix[i].begin(),matrix[i].end()); // revrse each row
         reverseArray(matrix[i]); 
-    }
-    
+    } 
+        
 
 }
 

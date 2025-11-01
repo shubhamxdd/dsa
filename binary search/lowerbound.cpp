@@ -20,7 +20,7 @@ int lowerBound(vector<int> arr, int target)
             low = mid + 1;
         }
     }
-    return ans;
+    return ans; // returns index
 }
 
 int upperBound(vector<int> arr, int target){
@@ -85,10 +85,10 @@ void floorAndCeil(vector<int> arr, int target){
 int main()
 {
     vector<int> arr = {1, 2, 3, 3, 7, 8, 9, 9, 9, 11};
-    // cout << lowerBound(arr, 4) << endl;
+    cout << lowerBound(arr, 4) << endl; // returns index 
     // cout << upperBound(arr, 7) << endl;
     // cout << lower_bound(arr.begin(), arr.end(), 3) - arr.begin();
-    floorAndCeil(arr,4);
+    // floorAndCeil(arr,4);
 
     return 0;
 }
