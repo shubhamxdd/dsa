@@ -49,6 +49,25 @@ pair<int,int> better(vector<vector<int>> &matrix,int target){
 
 }
 
+pair<int,int> optimal(vector<vector<int>> &matrix,int target){
+    int rows = matrix.size();
+    int cols = matrix[0].size();
+
+    int curr_row = 0;
+    int curr_col = cols - 1;
+
+    while(curr_row<rows && curr_col >= 0){
+        if(matrix[curr_row][curr_col] == target) return make_pair(curr_row,curr_col);
+        else if(matrix[curr_row][curr_col] >= target){
+            // eliminate col
+            curr_col--;
+        }else{
+            curr_row++;
+        }
+    }
+    return {-1,-1};
+}
+
 int main(){
     vector<vector<int>> matrix = {
         {1,4,7,11,15},
@@ -59,7 +78,7 @@ int main(){
     };
 
     // pair<int,int> ans = brute(matrix,19);
-    pair<int,int> ans = better(matrix,6);
+    pair<int,int> ans = optimal(matrix,6);
     cout << ans.first << " " << ans.second << endl;
 
 
