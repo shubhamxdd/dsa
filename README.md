@@ -32,6 +32,7 @@
 | 23 | [Search a 2D Matrix Using Binary Search](https://leetcode.com/problems/search-a-2d-matrix/) | binary search/Binary search on 2d arrays/74_search_2d_matrix.cpp | UNKNOWN |
 | 23 | [Search a 2D Matrix - ii Using Binary Search](https://leetcode.com/problems/search-a-2d-matrix-ii/) | binary search/Binary search on 2d arrays/240Search_2d_matrix_ii.cpp | UNKNOWN |
 | 24 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | strings/check_palindrome.cpp | UNKNOWN |
+| 24 | [Remove All Occurrences of a Substring](https://leetcode.com/problems/remove-all-occurrences-of-a-substring/) | strings/1910remove_all_occurences.cpp | UNKNOWN |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
