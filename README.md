@@ -35,6 +35,7 @@
 | 29 | [Remove All Occurrences of a Substring](https://leetcode.com/problems/remove-all-occurrences-of-a-substring/) | strings/1910remove_all_occurences.cpp |
 | 30 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | strings/567permutation_string.cpp |
 | 31 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | strings/151Reverse_Words_in_a_String.cpp |
+| 32 | [String Compression](https://leetcode.com/problems/string-compression/) | strings/443String_Compression.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
