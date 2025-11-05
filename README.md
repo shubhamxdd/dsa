@@ -36,6 +36,7 @@
 | 30 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | strings/567permutation_string.cpp |
 | 31 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | strings/151Reverse_Words_in_a_String.cpp |
 | 32 | [String Compression](https://leetcode.com/problems/string-compression/) | strings/443String_Compression.cpp |
+| 33 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | linked list\237Delete_Node_in_a_Linked_List.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
