@@ -148,6 +148,28 @@ Node* deleteWithValue(Node* head, int val){
 }
 
 
+// INSERTION
+Node* insertAtHead(Node* head, int elem){
+    // Node *temp = head;
+    // create a new node with data as elem
+    // Node *newNode = new Node(elem);
+    // newNode->next = head;
+    // instead of 2 lines, in one line
+    Node *newNode = new Node(5,head);
+
+    return newNode;
+}
+
+Node *insertAtTail(Node *head,int elem){
+    Node* temp = head;
+    Node* newNode = new Node(elem); // new node with data as elem, points to NULL
+
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    temp->next = newNode;
+    return head;
+}
 
 
 int main(){
@@ -161,8 +183,15 @@ int main(){
     Node *newHead = deleteKthElement(headOFLL,1);
     traverseLL(newHead);
     */
-
+    /*
     Node *newHead = deleteWithValue(headOFLL,4);
+    traverseLL(newHead);
+    */
+
+    // Node *newHead = insertAtHead(headOFLL,9);
+    // traverseLL(newHead);
+
+    Node *newHead = insertAtTail(headOFLL,9);
     traverseLL(newHead);
 
     // cout << headOFLL->data;
