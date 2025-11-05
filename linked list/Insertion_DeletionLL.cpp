@@ -164,12 +164,94 @@ Node *insertAtTail(Node *head,int elem){
     Node* temp = head;
     Node* newNode = new Node(elem); // new node with data as elem, points to NULL
 
+    if(head == NULL) return new Node(elem);
+
     while(temp->next!=NULL){
         temp=temp->next;
     }
     temp->next = newNode;
     return head;
 }
+
+/*
+Node *insertAtkthPosition(Node *head,int elem, int k){
+    if(head == NULL || k<=1) return new Node(elem,head);
+
+    Node *temp = head;
+    // Node *newNode = new Node(elem,NULL);
+
+    // point temp to k-1 position
+    int count = 0;
+
+    while(temp!=NULL){
+        count++;
+        if(count == k-1){ // count is 1 behind k
+            Node *newNode = new Node(elem,NULL);
+            newNode->next = temp->next;
+            temp->next= newNode;
+            return head;
+        }
+        temp=temp->next;
+    }
+    return head;
+}
+*/
+
+Node *insertAtkthPosition(Node *head, int elem, int k){
+    if(head == NULL){
+        if(k==1){
+            return new Node(elem,NULL);
+        }else{
+            return NULL;
+        }
+    }
+    
+    if(k==1){
+        Node *newNode = new Node(elem,head);
+        return newNode;
+    }
+    
+    Node *temp  = head;
+    int count = 0;
+    while(temp!=NULL){
+        count++;
+        if(count == k-1){
+            Node *newNode = new Node(elem,NULL);
+            newNode->next = temp->next;
+            temp->next=newNode;
+            break;
+        }
+        temp=temp->next;
+    }
+    return head;
+}
+
+
+
+Node *insertElemBeforeVal(Node *head, int elem, int beforeVal){
+    if(head == NULL){
+        return NULL;
+    }
+    
+    if(beforeVal==head->data){ // insert in starting
+        Node *newNode = new Node(elem,head);
+        return newNode;
+    }
+    
+    Node *temp  = head;
+    while(temp->next!=NULL){
+        // count++;
+        if(temp->next->data == beforeVal){
+            Node *newNode = new Node(elem,NULL);
+            newNode->next = temp->next;
+            temp->next=newNode;
+            break;
+        }
+        temp=temp->next;
+    }
+    return head;
+}
+
 
 
 int main(){
@@ -191,7 +273,13 @@ int main(){
     // Node *newHead = insertAtHead(headOFLL,9);
     // traverseLL(newHead);
 
-    Node *newHead = insertAtTail(headOFLL,9);
+    // Node *newHead = insertAtTail(headOFLL,9);
+    // traverseLL(newHead);
+
+    // Node *newHead = insertAtkthPosition(headOFLL,10,4);
+    // traverseLL(newHead);
+
+    Node *newHead = insertElemBeforeVal(headOFLL,10,3);
     traverseLL(newHead);
 
     // cout << headOFLL->data;
