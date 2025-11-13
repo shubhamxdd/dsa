@@ -69,6 +69,45 @@ Node* deleteTail(Node* head){
     return head;
 }
 
+Node *deleteKthNode(Node *head, int k){
+    if(head == nullptr) return nullptr;
+    
+    Node *temp = head;
+    int count = 0;
+    while(temp!=NULL){
+        count++;
+        if(count==k) break; // is this condition is true, temp will store kth elem
+        temp=temp->next;
+    }
+
+    Node* backElem = temp->back;
+    Node* nextElem = temp->next;
+
+    // single element DLL
+    if(backElem == nullptr && nextElem == nullptr) {
+        free(temp);
+        return nullptr;
+    }
+    // back elem null (delete head)
+    else if(backElem == nullptr){
+        return deleteHead(head);
+    }
+    // next elem null (delete tail)
+    else if(nextElem == nullptr){
+        return deleteTail(head);
+    }
+
+    temp->back = nullptr;
+    temp->next = nullptr;
+    free(temp);
+
+    backElem->next = nextElem;
+    nextElem->back = backElem;
+
+
+    return head;
+}
+
 int main(){
     vector<int> arr = {2,3,4,1};
     Node *head = arrayToDLL(arr);
@@ -77,9 +116,13 @@ int main(){
     // Node* newHead = deleteHead(head);
     // traverseDLL(newHead);
     
+    // traverseDLL(head);
+    // Node * newNode = deleteTail(head);
+    // traverseDLL(head);
+
     traverseDLL(head);
-    deleteTail(head);
-    traverseDLL(head);
+    Node * newNode = deleteKthNode(head,3);
+    traverseDLL(newNode);
     
     return 0;
 }
