@@ -108,6 +108,26 @@ Node *deleteKthNode(Node *head, int k){
     return head;
 }
 
+void deleteNode(Node* given){
+    Node *prevElem=given->back;
+    Node* nextElem = given->next;
+
+    // edge case
+    if(nextElem==nullptr){
+        prevElem->next = nullptr;
+        given->back=nullptr;
+        free(given);
+        return;
+    }
+
+    prevElem->next=nextElem;
+    nextElem->back = prevElem;
+
+    given->next = nullptr;
+    given->back = nullptr;
+    free(given);
+}
+
 int main(){
     vector<int> arr = {2,3,4,1};
     Node *head = arrayToDLL(arr);
@@ -120,9 +140,14 @@ int main(){
     // Node * newNode = deleteTail(head);
     // traverseDLL(head);
 
-    traverseDLL(head);
-    Node * newNode = deleteKthNode(head,3);
-    traverseDLL(newNode);
+    // traverseDLL(head);
+    // Node * newNode = deleteKthNode(head,3);
+    // traverseDLL(newNode);
     
+    traverseDLL(head);
+    deleteNode(head->next->next);
+    traverseDLL(head);
+
+
     return 0;
 }
