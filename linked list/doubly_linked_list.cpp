@@ -179,6 +179,58 @@ void insertBeforeGivenNode(Node *given, int val){
 }
 
 
+Node *insertAfterHead(Node *head, int val){
+    Node *temp = head;
+
+    Node *nextElem = temp->next;
+
+    Node* newNode = new Node(val,temp,nextElem);
+
+    nextElem->back = newNode;
+    temp->next = newNode;
+
+    return head;
+}
+
+Node *insertAfterTail(Node *head, int val){
+    Node *temp = head;
+
+    while(temp->next!=nullptr){
+        temp=temp->next;
+    } // after this loop, temp will point to last element in DLL
+    Node *newNode = new Node(val,temp,nullptr);
+    temp->next = newNode;
+    return head;
+}
+
+Node *insertAfterKthNode(Node *head,int k,int val){
+    Node *temp = head;
+
+    int count = 0;
+    while(temp->next!=nullptr){
+        count++;
+        if(count == k) break;
+        temp=temp->next;
+    } // temp will be at kth node after this loop
+
+    Node *nextElem = temp->next;
+
+    Node *newNode = new Node(val,temp,nextElem);
+    temp->next=newNode;
+    nextElem->back = newNode;
+
+    return head;
+}
+
+void insertAfterGivenNode(Node *given, int val){
+    Node *next = given->next;
+
+    Node *newNode = new Node(val,given,next);
+    given->next = newNode;
+    next->back = newNode;
+}
+
+
 int main(){
     vector<int> arr = {2,3,4,1};
     Node *head = arrayToDLL(arr);
@@ -211,11 +263,25 @@ int main(){
     // Node *newHead = insertBeforeKthNode(head,2,10);
     // traverseDLL(newHead);
 
-    traverseDLL(head);
-    insertBeforeGivenNode(head->next->next,20);
-    traverseDLL(head);
+    // traverseDLL(head);
+    // insertBeforeGivenNode(head->next->next,20);
+    // traverseDLL(head);
 
+    // traverseDLL(head);
+    // Node *newHead = insertAfterHead(head,10);
+    // traverseDLL(newHead);
 
+    // traverseDLL(head);
+    // Node *newHead = insertAfterTail(head,10);
+    // traverseDLL(newHead);
+
+    traverseDLL(head);
+    Node *newHead = insertAfterKthNode(head,3,10);
+    traverseDLL(newHead);
+    
+    // traverseDLL(head);
+    // insertAfterGivenNode(head->next->next,10);
+    // traverseDLL(head);
 
     return 0;
 }
