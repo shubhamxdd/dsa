@@ -152,6 +152,32 @@ Node *insertBeforeTail(Node *head, int val){
     return head;
 }
 
+Node *insertBeforeKthNode(Node *head, int k, int val){
+    Node *temp = head;
+    if(k==1) return insertBeforeHead(head,val);
+    int count = 0;
+    while(temp->next!=nullptr){
+        count++;
+        if(count == k) break;
+        temp=temp->next;
+    } // temp points to kth node
+
+    Node *prevElem = temp->back;
+    Node* newNode = new Node(val,prevElem,temp);
+    prevElem->next = newNode;
+    temp->back = newNode;
+
+    return head;
+}
+
+void insertBeforeGivenNode(Node *given, int val){
+    Node *prev = given->back;
+
+    Node *newNode = new Node(val,prev,given);
+    prev->next = newNode;
+    given->back = newNode;
+}
+
 
 int main(){
     vector<int> arr = {2,3,4,1};
@@ -177,9 +203,17 @@ int main(){
     // Node *newHead = insertBeforeHead(head,10);
     // traverseDLL(newHead);
     
+    // traverseDLL(head);
+    // Node *newHead = insertBeforeTail(head,10);
+    // traverseDLL(newHead);
+
+    // traverseDLL(head);
+    // Node *newHead = insertBeforeKthNode(head,2,10);
+    // traverseDLL(newHead);
+
     traverseDLL(head);
-    Node *newHead = insertBeforeTail(head,10);
-    traverseDLL(newHead);
+    insertBeforeGivenNode(head->next->next,20);
+    traverseDLL(head);
 
 
 
