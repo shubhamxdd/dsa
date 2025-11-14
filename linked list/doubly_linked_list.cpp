@@ -128,6 +128,31 @@ void deleteNode(Node* given){
     free(given);
 }
 
+Node *insertBeforeHead(Node *head, int val){
+    // make a new node with val value
+    Node *newNode = new Node(val,nullptr,head);
+    head->back = newNode;
+    return newNode;
+}
+
+Node *insertBeforeTail(Node *head, int val){
+    Node *temp = head;
+
+    while(temp->next!=nullptr){
+        temp=temp->next;
+    } // if while loop breaks, we are at tail element
+
+    Node *newNode = new Node(val,nullptr,temp);
+    Node *prevElem = temp->back;
+
+    temp->back = newNode;
+    prevElem->next=newNode;
+    newNode->back = prevElem;
+
+    return head;
+}
+
+
 int main(){
     vector<int> arr = {2,3,4,1};
     Node *head = arrayToDLL(arr);
@@ -144,9 +169,18 @@ int main(){
     // Node * newNode = deleteKthNode(head,3);
     // traverseDLL(newNode);
     
+    // traverseDLL(head);
+    // deleteNode(head->next->next);
+    // traverseDLL(head);
+    
+    // traverseDLL(head);
+    // Node *newHead = insertBeforeHead(head,10);
+    // traverseDLL(newHead);
+    
     traverseDLL(head);
-    deleteNode(head->next->next);
-    traverseDLL(head);
+    Node *newHead = insertBeforeTail(head,10);
+    traverseDLL(newHead);
+
 
 
     return 0;
