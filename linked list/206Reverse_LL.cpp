@@ -56,15 +56,29 @@ Node *reverseLLStack(Node *head){
         st.pop();
         temp=temp->next;
     }
-    return head;
-    
+    return head;   
+}
+
+Node *reverseLLOptimal(Node *head){
+    Node *temp = head;
+    Node *prev = nullptr;
+
+    while(temp!=nullptr){
+        Node *front = temp->next;
+        temp->next = prev;
+        prev=temp;
+        temp=front;
+    }
+    return prev;
 }
 
 int main(){
     vector<int> arr = {1,3,2,5};
     Node *head = arrayToLL(arr);
     traverseLL(head);
-    Node *newHead = reverseLLStack(head);
+    // Node *newHead = reverseLLStack(head);
+    // traverseLL(newHead);
+    Node *newHead = reverseLLOptimal(head);
     traverseLL(newHead);
     // traverseLL(head);
 
