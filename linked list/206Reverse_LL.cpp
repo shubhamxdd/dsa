@@ -72,6 +72,16 @@ Node *reverseLLOptimal(Node *head){
     return prev;
 }
 
+// Node *reverseLLRecursion(Node *head){
+//     if(head !=nullptr || head->next !=nullptr) return head;
+
+//     Node *newHead = reverseLLRecursion(head->next);
+//     Node *front = head->next;
+//     head->next=nullptr;
+//     return newHead;
+
+// }
+
 int main(){
     vector<int> arr = {1,3,2,5};
     Node *head = arrayToLL(arr);
