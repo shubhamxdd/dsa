@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Node
-{
+class Node{
 public:
     int data;
     Node *next;
@@ -18,8 +17,7 @@ public:
     }
 };
 
-Node *convertArrtoLL(vector<int> &arr)
-{
+Node *convertArrtoLL(vector<int> &arr){
     Node *head = new Node(arr[0]);
     Node *mover = head;
 
@@ -32,8 +30,7 @@ Node *convertArrtoLL(vector<int> &arr)
     return head;
 }
 
-void traverseLL(Node *head)
-{
+void traverseLL(Node *head){
     Node *temp = head;
 
     while (temp)
@@ -44,8 +41,7 @@ void traverseLL(Node *head)
     cout << endl;
 }
 
-int lengthOfLoopLL(Node *head)
-{
+int lengthOfLoopLL(Node *head){
     Node *temp = head;
     int timer = 1;
     map<Node *, int> mp;
