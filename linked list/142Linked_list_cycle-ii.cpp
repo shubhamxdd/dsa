@@ -53,13 +53,36 @@ Node *hasCycleii(Node *head){
     return nullptr;
 }
 
+Node *hasCycleiiOptimal(Node *head){
+    // detect loop
+
+    Node *slow = head;
+    Node *fast = head;
+
+
+    while(fast != nullptr && fast->next !=nullptr){
+        slow = slow->next;
+        fast=fast->next->next;
+
+        if(slow == fast){
+            // move slow to head and move both slow and fast by 1
+            while(slow!=fast){
+                slow = slow->next;
+                fast = fast->next;
+            }
+            return slow;
+        }
+    }
+    return nullptr;
+}
+
 
 int main(){
     vector<int> arr = {1,2,3,4,5};
     Node *head = convertArrtoLL(arr);
     // traverseLL(head);
 
-    Node *ans = hasCycleii(head);
+    Node *ans = hasCycleiiOptimal(head);
 
     if(ans==nullptr) cout << "no loop\n";
     else if(ans !=nullptr) cout << "yes loop";
