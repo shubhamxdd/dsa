@@ -54,6 +54,21 @@ bool detectCycle(Node *head){
     return false;
 }
 
+bool detectCycleOptimal(Node *head){
+    if(head == nullptr || head->next == nullptr) return false;
+    // Node *temp = head;
+    Node *slow = head;
+    Node *fast = head;
+
+    while(fast!=nullptr && fast->next!=nullptr){
+        // if(fast->next==nullptr) break;
+        // move pointers
+        slow=slow->next;
+        fast=fast->next->next;
+        if(slow==fast) return true;
+    }
+    return false;
+}
 
 
 int main(){
@@ -72,7 +87,7 @@ int main(){
     // cout << doesLoopExist;  // Expected: 1 (true)
     // DON'T call traverseLL - it will infinite loop!
 
-    bool doesLoopExist = detectCycle(head);
+    bool doesLoopExist = detectCycleOptimal(head);
     cout << doesLoopExist ;
 
     return 0;
