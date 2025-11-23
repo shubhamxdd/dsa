@@ -77,12 +77,13 @@ Node* deleteMiddle(Node *head){
     if(head == nullptr || head->next == nullptr) return nullptr;
     Node *slow = head;
     Node *fast = head;
-    Node *prev = nullptr;
+    // Node *prev = nullptr;
 
     // inc slow by 1 and fast by 2
 
+    fast=fast->next->next;
     while(fast != nullptr && fast->next != nullptr){
-        prev = slow;
+        // prev = slow;
         slow=slow->next;
         fast=fast->next->next;
     } // if this condition breaks means we got middle element 
@@ -90,7 +91,11 @@ Node* deleteMiddle(Node *head){
     // cout << prev->data << endl;
     // cout << slow->data << endl;
 
-    prev->next = slow->next;
+    // prev->next = slow->next;
+
+    Node *temp = slow->next;
+
+    slow->next=slow->next->next;
 
     delete slow;
     return head;
