@@ -74,15 +74,32 @@ Node *oddEvenLL(Node *head){
 
 }
 
+Node *oddEvenLLOptimal(Node *head){
+    if(head==nullptr && head->next!=nullptr) return head;
+    Node *odd = head;
+    Node *even = head->next;
+    Node *evenHead = head->next;
+
+    while(even!=nullptr && even->next!=nullptr){
+        odd->next=odd->next->next;
+        odd=odd->next;
+        even->next=even->next->next;
+        even=even->next;
+    }
+
+    odd->next=evenHead;
+    return head;
+
+}
 
 
 int main(){
     // vector<int> arr = {4,2,1,3};
     vector<int> arr = {1,3,4,2,5,6};
     Node *head = arrayToLL(arr);
-    // traverseLL(head);
-
-    oddEvenLL(head);
+    traverseLL(head);
+    Node *newHead = oddEvenLLOptimal(head);
+    traverseLL(newHead);
 
     return 0;
 }
