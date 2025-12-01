@@ -8,16 +8,25 @@ class stackUsingArr {
     public: 
         void push(int n){
             // overflow check
-            if(top>=10) cout << "Overflow" << endl;
+            if(top>=9) {
+                cout << "Overflow" << endl;
+                return;
+            }
             top++;
             st[top]=n;
         }
         void pop(){
-            if(top == -1) cout << "Empty stack" << endl;
+            if(top == -1) {
+                cout << "Empty stack" << endl;
+                return;
+            }
             top--;
         }
         int topElem(){
-            if(top == -1) cout << "Empty stack" << endl;
+            if(top == -1) {
+                cout << "Empty stack" << endl;
+                return -1;
+            }
             return st[top];
         }
         int size(){
@@ -37,7 +46,10 @@ class queueUsingArr{
     
     public:
         void push(int n){
-            if(currSize==size) cout << "queue full" <<endl;
+            if(currSize==size) {
+                cout << "queue full" <<endl;
+                return;
+            }
             if(currSize == 0) {
                 start = 0;
                 end = 0;
@@ -140,13 +152,13 @@ void traverseLL(Node* head){
 
 
 int main(){
-    // stackUsingArr st;
-    // st.push(10);
-    // st.push(11);
-    // st.push(12);
-    // st.pop();
-    // cout << st.topElem() << endl;
-    // cout << st.size() << endl;    
+    stackUsingArr stArr;
+    stArr.push(10);
+    stArr.push(11);
+    stArr.push(12);
+    stArr.pop();
+    cout << stArr.topElem() << endl;
+    cout << stArr.size() << endl;    
 
     // queueUsingArr q;
 
