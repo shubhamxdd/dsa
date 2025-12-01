@@ -45,6 +45,7 @@
 | 39 | [Delete middle node in Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) | linked list\2095Delete_Middle_Node.cpp |
 | 40 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | linked list\328Odd_even_LL.cpp |
 | 41 | [Remove nth node from back of Linked List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | linked list\19Remove_From_back.cpp |
+| 42 | [Sort List](https://leetcode.com/problems/sort-list/) | linked list\148Sort_LL.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
