@@ -61,14 +61,41 @@ list<pair<int,int>> findPairWithGivenSumBrute(Node *head, int sum){
     return res;
 }
 
+Node *findTailDLL(Node *head){
+    Node *temp = head;
+    while(temp->next!=nullptr){
+        temp=temp->next;
+    }
+    return temp;
+}
+
+list<pair<int,int>> findPairWithGivenSumOptimal(Node *head, int sum){
+    Node *left = head;
+    Node *right = findTailDLL(head);
+    list<pair<int,int>> ls;
+
+    while(left->data < right->data){
+        if(left->data + right->data == sum){
+            ls.push_back({left->data,right->data});
+            left=left->next;
+            right=right->back;
+        }else if(left->data + right->data > sum){
+            right=right->back;
+        }else {
+            left=left->next;
+        }
+    }
+    return ls;
+}
+
 
 int main(){
     vector<int> arr = {1,2,3,4,9};
     Node *head = arrayToDLL(arr);
-    // list<pair<int,int>> res;
     traverseDLL(head);
 
-    list<pair<int,int>> res = findPairWithGivenSumBrute(head,5);
+    // list<pair<int,int>> res = findPairWithGivenSumBrute(head,5);
+    list<pair<int,int>> res = findPairWithGivenSumOptimal(head,5);
     for(auto p: res){
         cout << "(" << p.first << "," << p.second << ")" << endl;
     }
