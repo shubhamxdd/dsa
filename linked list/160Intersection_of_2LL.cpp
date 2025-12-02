@@ -99,6 +99,33 @@ Node *intersectionBetter(Node *head1, Node *head2){
     }
 }
 
+Node *intersectionOptimal(Node *head1, Node *head2){
+    if(head1 == nullptr || head2 == nullptr) return nullptr;
+    Node *temp1 = head1;
+    Node *temp2 = head2;
+
+    while(temp1!=temp2){
+        temp1=temp1->next;
+        temp2=temp2->next;
+
+        if(temp1==temp2) return temp1;
+
+        if(temp1 == nullptr) temp1=head2;
+        if(temp2 == nullptr) temp2=head1;
+    }
+    return nullptr;
+}
+Node *intersectionOptimalV2(Node *head1, Node *head2){
+    if(head1 == nullptr || head2 == nullptr) return nullptr;
+    Node *temp1 = head1;
+    Node *temp2 = head2;
+
+    while(temp1!=temp2){
+        temp1=(temp1 == nullptr) ? head2 : temp1->next;
+        temp2=(temp2 == nullptr) ? head1 : temp2->next;
+    }
+    return temp1;
+}
 
 int main(){
     // Create two lists that intersect
@@ -128,7 +155,8 @@ int main(){
     
     // Find intersection
     // Node* result = intersectionBrute(head1, head2);
-    Node* result = intersectionBetter(head1, head2);
+    // Node* result = intersectionBetter(head1, head2);
+    Node* result = intersectionOptimal(head1, head2);
     
     if(result != nullptr){
         cout << "Intersection at node with value: " << result->data << endl;
