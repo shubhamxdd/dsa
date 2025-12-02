@@ -48,6 +48,7 @@
 | 42 | [Sort List](https://leetcode.com/problems/sort-list/) | linked list\148Sort_LL.cpp |
 | 43 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | linked list\21Merge_Two_Sorted_Lists.cpp |
 | 44 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | linked list\2_add_two_numbers.cpp |
+| 45 | [Sort LL of 0,1,2](-) | linked list\sortLL_with_0_1_2.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
