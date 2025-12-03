@@ -51,6 +51,7 @@
 | 45 | [Sort LL of 0,1,2](-) | linked list\sortLL_with_0_1_2.cpp |
 | 46 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | linked list\160Intersection_of_2LL.cpp |
 | 47 | [Rotate List](https://leetcode.com/problems/rotate-list/) | linked list\61Rotate_list.cpp |
+| 47 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | linked list\25Reverse_nodes_in_k_group.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
