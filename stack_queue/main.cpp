@@ -77,7 +77,7 @@ class queueUsingArr{
         }
         int top(){
             if(currSize==0){
-                // no elem
+                return;
             }
             return q[start];
         }
