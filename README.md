@@ -53,6 +53,7 @@
 | 47 | [Rotate List](https://leetcode.com/problems/rotate-list/) | linked list\61Rotate_list.cpp |
 | 47 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | linked list\25Reverse_nodes_in_k_group.cpp |
 | 47 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | linked list\25Reverse_nodes_in_k_group.cpp |
+| 48 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | stack_queue\225Stack_using_queue.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
