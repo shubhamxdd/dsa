@@ -59,6 +59,7 @@
 | 51 | [Min Stack](https://leetcode.com/problems/min-stack/) | stack_queue\155min_stack.cpp |
 | 51 | [Min Stack](https://leetcode.com/problems/min-stack/) | stack_queue\155min_stack.cpp |
 | 52 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/description/) | stack_queue\496Next_greater_element.cpp |
+| 52 | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/description/) | stack_queue\503_next_greater_element.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
