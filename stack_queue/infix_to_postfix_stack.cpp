@@ -28,7 +28,7 @@ string converstion(string infix){
             }
             st.pop();
         }else {
-            // operands
+            // operators
             while(!st.empty() && priority(infix[i]) <= priority(st.top())){
                 ans+=st.top();
                 st.pop();
