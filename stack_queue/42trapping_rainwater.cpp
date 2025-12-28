@@ -55,12 +55,35 @@ int trappingRainwaterBetter(vector<int> &arr){
     return total;
 }
 
+int trappingRainwaterOptimal(vector<int> &arr){
+    int l = 0;
+    int r = arr.size() - 1;
+
+    int lMax = 0;
+    int rMax = 0;
+    
+    int total = 0;
 
 
+    while(l<r){
+        lMax = max(lMax, arr[l]);
+        rMax = max(rMax, arr[r]);
+
+        if(lMax<rMax){
+            total+=lMax-arr[l];
+            l++;
+        }else {
+            total+=rMax-arr[r];
+            r--;
+        }
+    }
+    return total;
+}
 
 int main(){
     vector<int> arr = {4,2,0,3,2,5};
     // cout<<trappingRainwaterBrute(arr)<<endl;
-    cout<<trappingRainwaterBetter(arr)<<endl;
+    // cout<<trappingRainwaterBetter(arr)<<endl;
+    cout<<trappingRainwaterOptimal(arr)<<endl;
     return 0;
 }
