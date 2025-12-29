@@ -62,6 +62,7 @@
 | 53 | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/description/) | stack_queue\503_next_greater_element.cpp |
 | 54 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | stack_queue\42trapping_rainwater.cpp |
 | 55 | [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/) | stack_queue\907Subarray_minimum.cpp |
+| 56 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | stack_queue\735asteroid_collision.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
