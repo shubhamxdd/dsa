@@ -45,9 +45,42 @@ int largestArea(vector<int> &arr){
     return maxArea;
 }
 
+int largestAreaBetter(vector<int> &arr){
+    int n = arr.size();
+    vector<int> nse(n); // right
+    vector<int> pse(n); // left
+    stack<int> st;
+
+    // nse
+    for(int i=n-1;i>=0;i--){
+        while(!st.empty() && arr[st.top()]>=arr[i]) st.pop();
+        nse[i]=st.empty() ? n:st.top();
+        st.push(i);
+    }
+
+    while(!st.empty()) st.pop();
+
+    // pse
+    for(int i = 0;i<n;i++){
+        while(!st.empty() && arr[st.top()]>arr[i]) st.pop();
+        pse[i] = st.empty() ? -1:st.top();
+        st.push(i);
+    }
+    
+
+    int maxArea = 0;
+    for(int i = 0;i<n;i++){
+        int area = arr[i] * (nse[i]-pse[i]-1); // height is arr[i] width is nse[i]-pse[i]-1
+        maxArea = max(area,maxArea);
+    }
+    return maxArea;
+}
+
+
+
 int main(){
     vector<int> arr = {4,0,2,1,3};
-    cout << largestArea(arr);
+    cout << largestAreaBetter(arr);
     // for(int iter:arr) cout << iter << " ";
     // cout << endl;
     // vector<int> nse = findNSE(arr);
