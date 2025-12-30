@@ -66,6 +66,7 @@
 | 57 | [Asteroid Collision](https://leetcode.com/problems/sum-of-subarray-ranges/) | stack_queue\2104Sum_of_Subarray_Ranges.cpp |
 | 58 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | stack_queue\84Largest_Rectangle_in_Histogram.cpp |
 | 59 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | stack_queue\402Remove_k_digits.cpp |
+| 60 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | stack_queue\85Maximal_rectangle.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
