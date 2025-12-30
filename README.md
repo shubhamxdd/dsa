@@ -64,6 +64,7 @@
 | 55 | [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/) | stack_queue\907Subarray_minimum.cpp |
 | 56 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | stack_queue\735asteroid_collision.cpp |
 | 57 | [Asteroid Collision](https://leetcode.com/problems/sum-of-subarray-ranges/) | stack_queue\2104Sum_of_Subarray_Ranges.cpp |
+| 58 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | stack_queue\84Largest_Rectangle_in_Histogram.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
