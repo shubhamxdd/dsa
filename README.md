@@ -70,6 +70,7 @@
 | 61 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | stack_queue\239Sliding_window_maximum.cpp |
 | 62 | [Online Stock Span](https://leetcode.com/problems/online-stock-span/) | stack_queue\901Online_Stock_Span.cpp |
 | 63 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | stack_queue\739Daily_temperature.cpp |
+| 63 | [Celebrity Problem](https://leetcode.com/problems/celebrity-problem/) | stack_queue\75Celebrity_problem.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
