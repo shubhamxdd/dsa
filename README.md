@@ -73,6 +73,7 @@
 | 64 | [Celebrity Problem](https://leetcode.com/problems/celebrity-problem/) | stack_queue\75Celebrity_problem.cpp |
 | 65 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | stack_queue\146LRU_cache.cpp |
 | 66 | [N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/) | array_ques\961N-Repeated_Element_in_Size_2N_Array.cpp |
+| 67 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | array_ques\961N-Repeated_Element_in_Size_2N_Array.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
