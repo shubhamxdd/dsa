@@ -35,15 +35,39 @@ bool isSorted(vector<int> &arr, int n){
     return arr[n-1] >= arr[n-2] && isSorted(arr,n-1);
 }
 
+
+void printSubsetsRecursive(vector<int> &arr,vector<int> &ans,int i){
+    if(i==arr.size()) {
+        // print
+        for(int val:ans){
+            cout << val << " ";
+        }
+        cout << endl;
+        return;
+    }
+    ans.push_back(arr[i]);
+    printSubsetsRecursive(arr,ans,i+1);
+    ans.pop_back();
+    printSubsetsRecursive(arr,ans,i+1);
+}
+
 int main(){
+    vector<int> arr = {1,2,3};
+    vector<int> ans;
+    printSubsetsRecursive(arr,ans,0);
+
+
     // printNums(10);
     // cout << factorial(4);
     // cout << summ(4);
     // cout << summ2(0,4);
     // cout << fibonacci(6);
-    vector<int> arr = {1,2,3,4,5};
-    cout << isSorted(arr,arr.size()) << endl;
-    vector<int> arr1 = {1,3,2,4,5};
-    cout << isSorted(arr1,arr1.size()) << endl;
+    // vector<int> arr = {1,2,3,4,5};
+    // cout << isSorted(arr,arr.size()) << endl;
+    // vector<int> arr1 = {1,3,2,4,5};
+    // cout << isSorted(arr1,arr1.size()) << endl;
+
+
+
     return 0;
 }
