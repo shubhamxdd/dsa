@@ -25,10 +25,17 @@ int summ2(int currSum, int n){
     return summ2(currSum+n, n-1);
 }
 
+int fibonacci(int n){
+    if(n==0||n==1) return n;
+    return fibonacci(n-1) + fibonacci(n-2);
+
+}
+
 int main(){
     // printNums(10);
     // cout << factorial(4);
     // cout << summ(4);
-    cout << summ2(0,4);
+    // cout << summ2(0,4);
+    cout << fibonacci(6);
     return 0;
 }
