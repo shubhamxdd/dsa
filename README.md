@@ -75,7 +75,8 @@
 | 66 | [N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/) | array_ques\961N-Repeated_Element_in_Size_2N_Array.cpp |
 | 67 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | array_ques\961N-Repeated_Element_in_Size_2N_Array.cpp |
 | 68 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | array_ques\961N-Repeated_Element_in_Size_2N_Array.cpp |
-| 69 | [Four Divisors](https://leetcode.com/problems/four-divisors/) |  |
+| 69 | [Four Divisors](https://leetcode.com/problems/four-divisors/) | array_ques\1390Four_divisors.cpp |
+| 70 | [Subsets](https://leetcode.com/problems/subsets/) | recursion\main.cpp line 54 |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp

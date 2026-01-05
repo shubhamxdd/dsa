@@ -51,10 +51,46 @@ void printSubsetsRecursive(vector<int> &arr,vector<int> &ans,int i){
     printSubsetsRecursive(arr,ans,i+1);
 }
 
+// leetcode 78
+void getAllSubsets(vector<int> &nums, vector<int> &ans, int i, vector<vector<int>> &allSubsets){
+    if(i==nums.size()){
+        // store in array
+        allSubsets.push_back({ans});
+        return;
+    }
+    // include
+    ans.push_back(nums[i]);
+    getAllSubsets(nums,ans,i+1,allSubsets);
+    // exclude
+    ans.pop_back();
+    getAllSubsets(nums,ans,i+1,allSubsets);
+}
+
+vector<vector<int>> subsets(vector<int> &nums){
+    vector<vector<int>> allSubsets;
+    vector<int> ans;
+
+    getAllSubsets(nums,ans,0,allSubsets);
+    return allSubsets;
+}
+
 int main(){
     vector<int> arr = {1,2,3};
-    vector<int> ans;
-    printSubsetsRecursive(arr,ans,0);
+    // vector<int> ans;
+    // printSubsetsRecursive(arr,ans,0);
+
+    vector<vector<int>> allSubsetss =  subsets(arr);
+
+    for(vector<int> subset:allSubsetss){
+        cout << "{ ";
+        for(int val:subset){
+            cout << val << " ";
+        }
+        cout << "}" << endl;
+    }
+
+    
+
 
 
     // printNums(10);
