@@ -77,6 +77,7 @@
 | 68 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | array_ques\961N-Repeated_Element_in_Size_2N_Array.cpp |
 | 69 | [Four Divisors](https://leetcode.com/problems/four-divisors/) | array_ques\1390Four_divisors.cpp |
 | 70 | [Subsets](https://leetcode.com/problems/subsets/) | recursion\main.cpp line 54 |
+| 71 | [Subsets](https://leetcode.com/problems/subsets/) | recursion\main.cpp line 54 |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
