@@ -79,6 +79,7 @@
 | 70 | [Subsets](https://leetcode.com/problems/subsets/) | recursion\main.cpp line 54 |
 | 71 | [Permutations](https://leetcode.com/problems/permutations/) | recursion\46Array_permutation.cpp |
 | 72 | [N Queens](https://leetcode.com/problems/n-queens/) | recursion\51nqueens.cpp |
+| 73 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver) | recursion\37sudoku_solver.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
