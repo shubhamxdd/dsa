@@ -80,6 +80,8 @@
 | 71 | [Permutations](https://leetcode.com/problems/permutations/) | recursion\46Array_permutation.cpp |
 | 72 | [N Queens](https://leetcode.com/problems/n-queens/) | recursion\51nqueens.cpp |
 | 73 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver) | recursion\37sudoku_solver.cpp |
+| 74 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | rrecursion\39Combination_sum.cpp |
+| 75 | [Minimum Time Visiting All Points](https://leetcode.com/problems/minimum-time-visiting-all-points/) | 1266.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
