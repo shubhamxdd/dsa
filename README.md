@@ -82,6 +82,7 @@
 | 73 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver) | recursion\37sudoku_solver.cpp |
 | 74 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | rrecursion\39Combination_sum.cpp |
 | 75 | [Minimum Time Visiting All Points](https://leetcode.com/problems/minimum-time-visiting-all-points/) | 1266.cpp |
+| 76 | [Minimum Time Visiting All Points](https://leetcode.com/problems/palindrome-partitioning/) | recursion\131Palindrome_partitioning.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
