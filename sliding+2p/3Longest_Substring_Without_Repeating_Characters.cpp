@@ -16,8 +16,34 @@ int longestSequenceBrute(string s){
     
 }
 
+int longestSequenceOptimal(string s){
+    int hashArr[256] = {-1};
+    fill(hashArr,hashArr+256,-1);
+    int maxLen = 0;
+    int n = s.size();
+    int l = 0;
+    int r = 0;
+
+    while(r<n){
+        // check if exist in map
+        if(hashArr[s[r]] != -1){
+            // means exist
+            if(hashArr[s[r]] >= l){
+                l = hashArr[s[r]] + 1;
+            }
+        }
+        int len = r - l + 1;
+        maxLen = max(maxLen,len);
+        hashArr[s[r]] = r;
+        r++;
+    }
+    return maxLen;
+}
+
+
 int main(){
     string s = "abcabcbb";
-    cout << longestSequenceBrute(s);
+    // cout << longestSequenceBrute(s);
+    cout << longestSequenceOptimal(s);
     return 0;
 }
