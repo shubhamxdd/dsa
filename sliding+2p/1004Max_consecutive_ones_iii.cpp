@@ -40,6 +40,8 @@ int maxConseqOnesBetter(vector<int> &nums, int k){
     return maxLen;
 }
 
+
+
 int main(){
     vector<int> arr = {1,1,1,0,0,0,1,1,1,1,0};
     // cout << maxConseqOnesBrute(arr,2);
