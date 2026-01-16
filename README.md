@@ -84,7 +84,8 @@
 | 75 | [Minimum Time Visiting All Points](https://leetcode.com/problems/minimum-time-visiting-all-points/) | 1266.cpp |
 | 76 | [Minimum Time Visiting All Points](https://leetcode.com/problems/palindrome-partitioning/) | recursion\131Palindrome_partitioning.cpp |
 | 77 | [Check Knight Tour Configuration](https://leetcode.com/problems/check-knight-tour-configuration/) | recursion\2596Knight_tour.cpp |
-| 77 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) | sliding+2p\3Longest_Substring_Without_Repeating_Characters.cpp |
+| 78 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) | sliding+2p\3Longest_Substring_Without_Repeating_Characters.cpp |
+| 79 | [Max Consecutive Ones iii](https://leetcode.com/problems/max-consecutive-ones-iii/) | sliding+2p\1004Max_consecutive_ones_iii.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
