@@ -89,6 +89,7 @@
 | 80 | [Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/) | sliding+2p\930Binary_Subarrays_With_Sum.cpp |
 | 81 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | subarray_sum_k.cpp |
 | 82 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | 523Continous_subarray_sum.cpp |
+| 83 | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | sliding+2p\1248Count_Number_of_Nice_Subarrays.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
