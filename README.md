@@ -88,6 +88,7 @@
 | 79 | [Max Consecutive Ones iii](https://leetcode.com/problems/max-consecutive-ones-iii/) | sliding+2p\1004Max_consecutive_ones_iii.cpp |
 | 80 | [Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/) | sliding+2p\930Binary_Subarrays_With_Sum.cpp |
 | 81 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | subarray_sum_k.cpp |
+| 82 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | 523Continous_subarray_sum.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
