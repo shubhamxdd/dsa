@@ -17,10 +17,30 @@ int brute(vector<int> &arr){
     return maxCount;
 }
 
+int optimal(vector<int> &arr){
+    int l = 0;
+    int r = 0;
+    int n = arr.size();
+    int len = 0;
+    unordered_map<int,int> mp;
 
+    while(r<n){
+        mp[arr[r]]++;
+        // can replace this while with if also 
+        while(mp.size()>2){
+            mp[arr[l]]--;
+            if(mp[arr[l]] == 0) mp.erase(arr[l]);
+            l++;
+        }
+        len = max(len,r-l+1);
+        r++;
+    }
+    return len;
+}
 
 int main(){
     vector<int> arr = {3,3,3,1,2,1,1,2,3,3,4};
-    cout << brute(arr);
+    // cout << brute(arr);
+    cout << optimal(arr);
     return 0;
 }
