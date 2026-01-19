@@ -26,7 +26,7 @@ int optimal(vector<int> &arr){
 
     while(r<n){
         mp[arr[r]]++;
-        // can replace this while with if also 
+        // can replace this while with if, hence improving time complexity
         while(mp.size()>2){
             mp[arr[l]]--;
             if(mp[arr[l]] == 0) mp.erase(arr[l]);
