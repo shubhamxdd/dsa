@@ -45,11 +45,44 @@ vector<vector<int>> threeSumBetter(vector<int> &nums){
     return anss;
 }
 
+vector<vector<int>> threeSumOptimal(vector<int> &nums){
+    sort(nums.begin(),nums.end());
+    vector<vector<int>> ans;
+
+    for(int i = 0;i<nums.size();i++){
+        if(i>0 && nums[i] == nums[i-1]) continue;
+        int j = i+1;
+        int k = nums.size() - 1;
+
+        while(j<k){
+            // 3 cases
+            int sum = nums[i] + nums[j] + nums[k];
+            if(sum>0){
+                // decrease the sum
+                k--;
+            }else if(sum<0){
+                // increase the sum
+                j++;
+            }else{
+                // sum == 0 , found triplet
+                vector<int> triplet = {nums[i],nums[j],nums[k]};
+                ans.push_back(triplet);
+                j++; 
+                k--;
+                // move both elements to a new element
+                while(j<k && nums[j] == nums[j-1])j++;
+                while(j<k && nums[k] == nums[k+1])k--;
+            }
+        }
+    }
+    return ans;
+}
 
 int main(){
     vector<int> arr = {-1,0,1,2,-1,-4};
     // vector<vector<int>> result = threeSumBrute(arr);
-    vector<vector<int>> result = threeSumBetter(arr);
+    // vector<vector<int>> result = threeSumBetter(arr);
+    vector<vector<int>> result = threeSumOptimal(arr);
     for(auto vec : result){
         for(auto val : vec){
             cout<<val<<" ";
