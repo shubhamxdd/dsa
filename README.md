@@ -94,6 +94,7 @@
 | 85 | [Three Sum](https://leetcode.com/problems/3sum/) | 3s.cpp |
 | 86 | [Four Sum](https://leetcode.com/problems/4sum/) | 4s.cpp |
 | 87 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 152Maximum_product_subarray.cpp |
+| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | 88merge_sorted_array.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
