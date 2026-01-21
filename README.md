@@ -92,6 +92,7 @@
 | 83 | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | sliding+2p\1423_Maximum_Points_You_Can_Obtain_from_Cards.cpp |
 | 84 | [Fruits Into Basket](https://leetcode.com/problems/fruit-into-baskets/) | sliding+2p\904fruits_in_basket.cpp |
 | 85 | [Three Sum](https://leetcode.com/problems/3sum/) | 3s.cpp |
+| 86 | [Four Sum](https://leetcode.com/problems/4sum/) | 4s.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
