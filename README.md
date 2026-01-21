@@ -93,6 +93,7 @@
 | 84 | [Fruits Into Basket](https://leetcode.com/problems/fruit-into-baskets/) | sliding+2p\904fruits_in_basket.cpp |
 | 85 | [Three Sum](https://leetcode.com/problems/3sum/) | 3s.cpp |
 | 86 | [Four Sum](https://leetcode.com/problems/4sum/) | 4s.cpp |
+| 87 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 152Maximum_product_subarray.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
