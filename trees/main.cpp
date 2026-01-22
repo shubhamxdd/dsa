@@ -28,6 +28,13 @@ void inorder(Node *node){
     inorder(node->right);
 }
 
+void postorder(Node *node){
+    if(node == nullptr) return;
+    postorder(node->left);
+    postorder(node->right);
+    cout << node->data << " ";
+}
+
 int main(){
     // Creating nodes
     Node* root = new Node(1);
@@ -46,8 +53,13 @@ int main(){
 
     cout << "Preorder Traversal: ";
     preorder(root);
+    cout << endl;
     cout << "Inorder Traversal: ";
     inorder(root);
+    cout << endl;
+    cout << "Postorder Traversal: ";
+    postorder(root);
+    cout << endl;
 
 
 
