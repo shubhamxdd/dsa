@@ -21,6 +21,19 @@ void preorder(Node *node){
     preorder(node->right);
 }
 
+void preorderStack(Node *root){
+    stack<Node*> st;
+    st.push(root);
+    while(!st.empty()){
+        Node *top = st.top();
+        st.pop();
+        // if let of top exist, push in stack, same with right
+        if(top->right!=nullptr) st.push(top->right);
+        if(top->left!=nullptr) st.push(top->left);
+        cout << top->data << " ";
+    }
+}
+
 void inorder(Node *node){
     if(node == nullptr) return;
     inorder(node->left);
@@ -92,13 +105,15 @@ int main(){
     root1->right->right->right = new Node(10);
 
     
-    vector<vector<int>> levelTraversal = levelOrderTraversal(root1);
-    for(vector<int> arr: levelTraversal){
-        for(int val: arr){
-            cout << val << " ";
-        }
-        cout << endl;
-    }
-    
+    // vector<vector<int>> levelTraversal = levelOrderTraversal(root1);
+    // for(vector<int> arr: levelTraversal){
+    //     for(int val: arr){
+    //         cout << val << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    preorderStack(root);
+
     return 0;
 }
