@@ -67,6 +67,29 @@ void postorder(Node *node){
     cout << node->data << " ";
 }
 
+void postorderTwoStacks(Node *root){
+    stack<Node*> st1;
+    stack<Node*> st2;
+    if(root==nullptr) return;
+    st1.push(root);
+
+    while(!st1.empty()){
+        // pop elemt from s1 and put in s2
+        root = st1.top();
+        st1.pop();
+        st2.push(root);
+        
+        // if not null move to left, right
+        if(root->left!=nullptr) st1.push(root->left);
+        if(root->right!=nullptr) st1.push(root->right);
+    }
+    // now pop s2 and print/push elemt
+    while(!st2.empty()){
+        cout << st2.top()->data << " ";
+        st2.pop();
+    }
+}
+
 vector<vector<int>> levelOrderTraversal(Node* root){
     vector<vector<int>> ans;
     if(root == nullptr) return ans;
@@ -133,7 +156,8 @@ int main(){
     // }
 
     // preorderStack(root);
-    inorderStack(root);
+    // inorderStack(root);
+    postorderTwoStacks(root);
 
     return 0;
 }
