@@ -41,6 +41,25 @@ void inorder(Node *node){
     inorder(node->right);
 }
 
+void inorderStack(Node *root){
+    stack<Node*> st;
+    Node *curr = root;
+    while(true){
+        if(curr!=nullptr){
+            st.push(curr);
+            curr=curr->left;
+        }else{
+            if(st.empty()) break;
+            curr = st.top();
+            st.pop();
+            // print
+            cout << curr->data << " ";
+            curr=curr->right;
+        }
+
+    }
+}
+
 void postorder(Node *node){
     if(node == nullptr) return;
     postorder(node->left);
@@ -113,7 +132,8 @@ int main(){
     //     cout << endl;
     // }
 
-    preorderStack(root);
+    // preorderStack(root);
+    inorderStack(root);
 
     return 0;
 }
