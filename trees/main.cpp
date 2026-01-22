@@ -90,6 +90,63 @@ void postorderTwoStacks(Node *root){
     }
 }
 
+void preInPostorderSingle(Node* root){
+    if(root == nullptr) return;
+    stack<pair<Node*,int>> st;
+    st.push({root,1});
+    vector<int> preorder;
+    vector<int> inorder;
+    vector<int> postorder;
+
+    while(!st.empty()){
+        pair<Node*,int> top = st.top();
+        st.pop();
+
+        if(top.second == 1){
+            // preorder push
+            preorder.push_back(top.first->data);
+            // second++
+            top.second++;
+            // pushback in stack
+            st.push(top);
+            // move left if exist (push in stack)
+            if(top.first->left != nullptr){
+                st.push({top.first->left,1});
+            }
+        }else if(top.second == 2){
+            // inorder push
+            inorder.push_back(top.first->data);
+            // second++
+            top.second++;
+            // push back in stack
+            st.push(top);
+            // move right if exist (push in stack)
+            if(top.first->right != nullptr){
+                st.push({top.first->right,1});
+            }
+        }else {
+            // push in post
+            postorder.push_back(top.first->data);
+        }
+    }
+
+    // print all 3 traversals
+    cout << "Preorder: ";
+    for(int v: preorder){
+        cout << v << " ";
+    }
+    cout << endl;
+    cout << "Inorder: ";
+    for(int v: inorder){
+        cout << v << " ";
+    }
+    cout << endl;
+    cout << "Postorder: ";
+    for(int v: postorder){
+        cout << v << " ";
+    }
+}
+
 vector<vector<int>> levelOrderTraversal(Node* root){
     vector<vector<int>> ans;
     if(root == nullptr) return ans;
@@ -157,7 +214,9 @@ int main(){
 
     // preorderStack(root);
     // inorderStack(root);
-    postorderTwoStacks(root);
+    // postorderTwoStacks(root);
+
+    preInPostorderSingle(root);
 
     return 0;
 }
