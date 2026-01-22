@@ -21,6 +21,13 @@ void preorder(Node *node){
     preorder(node->right);
 }
 
+void inorder(Node *node){
+    if(node == nullptr) return;
+    inorder(node->left);
+    cout << node->data << " ";
+    inorder(node->right);
+}
+
 int main(){
     // Creating nodes
     Node* root = new Node(1);
@@ -29,16 +36,19 @@ int main(){
     root->left->left = new Node(4);
     root->left->right = new Node(5);
     // Simple output to verify tree structure
-    cout << "Root Node: " << root->data << endl;
-    cout << "Left Child of Root: " << root->left->data << endl; 
-    cout << "Right Child of Root: " << root->right->data << endl;
-    cout << "Left Child of Left Node: " << root->left->left->data << endl;
-    cout << "Right Child of Left Node: " << root->left->right->data << endl;
+    // cout << "Root Node: " << root->data << endl;
+    // cout << "Left Child of Root: " << root->left->data << endl; 
+    // cout << "Right Child of Root: " << root->right->data << endl;
+    // cout << "Left Child of Left Node: " << root->left->left->data << endl;
+    // cout << "Right Child of Left Node: " << root->left->right->data << endl;
 
 
 
-    // preorder traversal
+    cout << "Preorder Traversal: ";
     preorder(root);
+    cout << "Inorder Traversal: ";
+    inorder(root);
+
 
 
     return 0;
