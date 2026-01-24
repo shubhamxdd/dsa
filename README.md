@@ -98,6 +98,7 @@
 | 89 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | trees\104Binary_Tree_height.cpp |
 | 90 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/description/) | trees\110Balanced_binary_tree.cpp |
 | 91 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/description/) | trees\110Balanced_binary_tree.cpp |
+| 92 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum) | trees\124Binary_Tree_Maximum_Path_Sum.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
