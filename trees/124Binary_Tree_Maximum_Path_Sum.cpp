@@ -15,8 +15,8 @@ class Node{
 
 int maxPathSumRec(Node *root, int &sum){
     if(root == nullptr) return 0;
-    int leftSum = maxPathSumRec(root->left,sum);
-    int rightSum = maxPathSumRec(root->right,sum);
+    int leftSum = max(0,maxPathSumRec(root->left,sum));
+    int rightSum = max(0,maxPathSumRec(root->right,sum));
     sum = max(sum, leftSum+rightSum+root->val);
     return root->val + max(leftSum,rightSum);
 }
