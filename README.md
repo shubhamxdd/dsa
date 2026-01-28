@@ -100,6 +100,7 @@
 | 91 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/description/) | trees\110Balanced_binary_tree.cpp |
 | 92 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum) | trees\124Binary_Tree_Maximum_Path_Sum.cpp |
 | 93 | [Same Tree](https://leetcode.com/problems/same-tree/) | trees\100Same_tree.cpp |
+| 94 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | trees\103Zig_zag_trav.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
