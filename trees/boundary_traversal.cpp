@@ -45,8 +45,8 @@ void addRightNodes(Node *root, vector<int> &ans){
         if(curr->right) curr=curr->right;
         else curr=curr->left;
     }
-    reverse(trav.begin(),trav.end());
-    for(int i = 0;i<trav.size();i++){
+    // reverse(trav.begin(),trav.end());
+    for(int i = trav.size()-1;i>=0;i--){
         ans.push_back(trav[i]);
     }
 }
