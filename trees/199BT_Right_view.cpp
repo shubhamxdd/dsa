@@ -24,11 +24,30 @@ void rightViewRec(Node* root, vector<int> &ans,int level){
     rightViewRec(root->right,ans,level+1);
     rightViewRec(root->left,ans,level+1);
 }
+
 vector<int> rightViewBT(Node *root){
     vector<int> arr;
     if(root == nullptr) return arr;
     rightViewRec(root,arr,0);
+    return arr;
+}
 
+void leftViewRec(Node* root, vector<int> &ans,int level){
+    if(root == nullptr) return;
+    if(level == ans.size()){
+        // means seeing this element for this first time, so push it
+        ans.push_back(root->data);
+    }
+    // we use reverse preorder here
+    // right left root
+    leftViewRec(root->left,ans,level+1);
+    leftViewRec(root->right,ans,level+1);
+}
+
+vector<int> leftViewBT(Node *root){
+    vector<int> arr;
+    if(root == nullptr) return arr;
+    leftViewRec(root,arr,0);
     return arr;
 }
 
@@ -53,7 +72,8 @@ int main(){
     root1->right->right->left->left = new Node(10);
     root1->right->right->left->right = new Node(11);
 
-    vector<int> arr = rightViewBT(root);
+    // vector<int> arr = rightViewBT(root);
+    vector<int> arr = leftViewBT(root);
 
 
     for(int val:arr){
