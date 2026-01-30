@@ -13,6 +13,33 @@ class Node {
         }
 };
 
+void inorder(Node* root, int v, int l, map<int, map<int, multiset<int>>> &mp){
+    if(root == nullptr) return;
+    // left
+    inorder(root->left, v-1, l+1, mp);
+    // node push in map
+    mp[v][l].insert(root->data);
+    // right
+    inorder(root->right, v+1, l+1, mp);
+}
+
+vector<vector<int>> verticalTraversalInorder(Node* root){
+    vector<vector<int>> ansArr;
+    if(root == nullptr) return ansArr;
+    map<int,map<int,multiset<int>>> mp;
+    inorder(root, 0, 0, mp);
+
+
+    for(auto &p : mp){
+        vector<int> col;
+        for(auto &q : p.second){
+            col.insert(col.end(), q.second.begin(), q.second.end());
+        }
+        ansArr.push_back(col);
+    }
+    return ansArr;
+}
+
 vector<vector<int>> verticalTraversal(Node* root){
     vector<vector<int>> ansArr;
     if(root == nullptr) return ansArr;
@@ -66,7 +93,8 @@ int main(){
     root1->right->right->left->left = new Node(10);
     root1->right->right->left->right = new Node(11);
 
-    vector<vector<int>> arr = verticalTraversal(root);
+    // vector<vector<int>> arr = verticalTraversal(root);
+    vector<vector<int>> arr = verticalTraversalInorder(root);
 
     for(vector<int> vec:arr){
         cout << "{ ";
