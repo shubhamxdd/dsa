@@ -103,6 +103,7 @@
 | 94 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | trees\103Zig_zag_trav.cpp |
 | 95 | [Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | trees\987Vertical_traversal.cpp |
 | 96 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | trees\199BT_Right_view.cpp |
+| 97 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | trees\101Symmetric_tree.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
