@@ -52,6 +52,23 @@ Node* lowestCommonAncestorBrute(Node* root, Node* p, Node* q) {
 
 
 
+
+Node *lowestCommonAncestorOptimal(Node* root, Node* p, Node* q){
+    if(root == nullptr || root == p || root == q) return root;
+
+    // call for left
+    Node *left = lowestCommonAncestorOptimal(root->left,p,q);
+    // call for right
+    Node *right = lowestCommonAncestorOptimal(root->right,p,q);
+
+    if(left != nullptr && right != nullptr) return root;
+    else if(left != nullptr && right == nullptr) return left;
+    else if(left == nullptr && right != nullptr) return right;
+    else return nullptr;
+
+}
+
+
 int main(){
     Node *root = new Node(1);
     root->left = new Node(2);
@@ -65,7 +82,8 @@ int main(){
     root1->left->right = new Node(5);
     root1->right = new Node(3);
     
-    Node* ans = lowestCommonAncestorBrute(root, root->left->right, root->right);
+    // Node* ans = lowestCommonAncestorBrute(root, root->left->right, root->right);
+    Node* ans = lowestCommonAncestorOptimal(root, root->left->right, root->right);
 
     cout << ans->val << endl;
 
