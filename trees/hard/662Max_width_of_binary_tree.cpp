@@ -14,15 +14,15 @@ class Node {
 int maxWidth(Node* root){
     if(root == nullptr) return 0;
     int ans = 0;
-    queue<pair<Node*,int>> q;
+    queue<pair<Node*,long long>> q;
     q.push({root,0});
 
     while(!q.empty()){
         int size = q.size();
-        int min = q.front().second;
+        long long min = q.front().second;
         int first,last;
         for(int i = 0;i<size;i++){
-            int curr_id = q.front().second - min;
+            long long curr_id = q.front().second - min;
             Node* top = q.front().first;
             q.pop();
             if(i == 0) first = curr_id;
