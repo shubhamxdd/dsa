@@ -110,6 +110,7 @@
 | 101 | [Amount of Time for Binary Tree to Be Infected](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/) | trees\hard\min_time_to_burn_a_tree_from_given_node.cpp |
 | 102 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | trees\hard\222Count_complete_tree_nodes.cpp |
 | 103 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | trees\hard\297Serialize_Deserialize_Binary_Tree.cpp |
+| 104 | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | trees\hard\297Serialize_Deserialize_Binary_Tree.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
