@@ -25,7 +25,7 @@ int floor(Node* root, int val){
         }
         
         if(c->val < val){
-            // go left
+            // go right
             ans=c->val;
             c=c->right;
         }
