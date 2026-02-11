@@ -57,6 +57,33 @@ int ceil(Node* root, int val){
 }
 
 
+vector<int> floorAndCeil(Node* root, int x){
+    if(root == nullptr) return {-1,-1};
+    int floor = -1;
+    int ceil = -1;
+
+
+    while(root){
+        if(root->val == x){
+            floor = root->val;
+            ceil = root->val;
+            return {floor,ceil};
+        }
+
+        if(root->val > x){
+            // floor
+            ceil=root->val;
+            root=root->left;
+        }
+        else{
+            floor=root->val;
+            root=root->right;
+        }
+    }
+    return {floor,ceil};
+}
+
+
 int main(){
     Node *root = new Node(10);
     root->left = new Node(5);
@@ -69,6 +96,11 @@ int main(){
 
     cout << floor(root,16) << endl;
     cout << ceil(root,16) << endl;
+
+
+    vector<int> fs = floorAndCeil(root,16);
+    for(int v:fs) cout << v << " ";
+    
 
     return 0;
 }
