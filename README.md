@@ -112,6 +112,7 @@
 | 103 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | trees\hard\297Serialize_Deserialize_Binary_Tree.cpp |
 | 104 | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | trees\hard\297Serialize_Deserialize_Binary_Tree.cpp |
 | 105 | [Search in BST](https://leetcode.com/problems/search-in-a-binary-search-tree/) | trees\BST\700Search_in_BST.cpp |
+| 106 | [Insert Node in BST](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | trees\BST\701Insert_in_bst.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
