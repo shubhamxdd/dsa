@@ -114,6 +114,7 @@
 | 105 | [Search in BST](https://leetcode.com/problems/search-in-a-binary-search-tree/) | trees\BST\700Search_in_BST.cpp |
 | 106 | [Insert Node in BST](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | trees\BST\701Insert_in_bst.cpp |
 | 107 | [Delete Node in BST](https://leetcode.com/problems/delete-node-in-a-bst/) | trees\BST\450Delete_node_bst.cpp |
+| 108 | [Kth smallest element in BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst) | trees\BST\230Kth_Smallest_Element_in_a_BST.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
