@@ -117,6 +117,7 @@
 | 108 | [Kth smallest element in BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst) | trees\BST\230Kth_Smallest_Element_in_a_BST.cpp |
 | 109 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | trees\BST\98Validate_bst.cpp |
 | 110 | [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree) | trees\BST\235LCA_bst.cpp |
+| 111 | [BST Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | trees\BST\173BST_iterator.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
