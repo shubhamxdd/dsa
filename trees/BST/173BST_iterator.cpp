@@ -15,43 +15,69 @@ class Node{
 
 
 // brute
+// class BSTIterator {
+// public:
+//     vector<Node*> inorderTravVector;
+//     int currPtr;
+
+//     void inorderTrav(Node* root, vector<Node*>& ansVec) {
+//         if (root == nullptr)
+//             return;
+//         inorderTrav(root->left, ansVec);
+//         ansVec.push_back(root);
+//         inorderTrav(root->right, ansVec);
+//     }
+
+//     BSTIterator(Node* root) {
+//         inorderTrav(root, inorderTravVector);
+//         currPtr = 0;
+//     }
+
+//     int next() {
+//         if (inorderTravVector[currPtr]) {
+//             return inorderTravVector[currPtr++]->val;
+//         }
+//         return false;
+//     }
+
+//     bool hasNext() {
+//         int size = inorderTravVector.size() - 1;
+//         if (currPtr == size + 1)
+//             return false;
+//         if (inorderTravVector[currPtr])
+//             return true;
+//         return false;
+//     }
+// };
+
+// optimal
 class BSTIterator {
 public:
-    vector<Node*> inorderTravVector;
-    int currPtr;
-
-    void inorderTrav(Node* root, vector<Node*>& ansVec) {
-        if (root == nullptr)
-            return;
-        inorderTrav(root->left, ansVec);
-        ansVec.push_back(root);
-        inorderTrav(root->right, ansVec);
-    }
-
-    BSTIterator(Node* root) {
-        inorderTrav(root, inorderTravVector);
-        currPtr = 0;
-    }
-
-    int next() {
-        if (inorderTravVector[currPtr]) {
-            return inorderTravVector[currPtr++]->val;
+    stack<Node*> st;
+    void pushAll(Node* root){
+        while(root!=nullptr){
+            st.push(root);
+            root=root->left;
         }
-        return false;
     }
-
+    BSTIterator(Node* root) {
+        pushAll(root);
+    }
+    
+    int next() {
+        Node* top = st.top();
+        st.pop();
+        if(top->right!=nullptr) pushAll(top->right);
+        return top->val;
+    }
+    
     bool hasNext() {
-        int size = inorderTravVector.size() - 1;
-        if (currPtr == size + 1)
-            return false;
-        if (inorderTravVector[currPtr])
-            return true;
+        if(!st.empty()) return true;
         return false;
     }
 };
 
 int main(){
-    Node* root = new Node(10);
     Node *root = new Node(10);
     root->left = new Node(5);
     root->left->left = new Node(2);
