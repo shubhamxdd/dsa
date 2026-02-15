@@ -118,6 +118,7 @@
 | 109 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | trees\BST\98Validate_bst.cpp |
 | 110 | [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree) | trees\BST\235LCA_bst.cpp |
 | 111 | [BST Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | trees\BST\173BST_iterator.cpp |
+| 112 | [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) | trees\hard\653_2sum_bst.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
