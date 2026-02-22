@@ -121,6 +121,7 @@
 | 112 | [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) | trees\hard\653_2sum_bst.cpp |
 | 113 | [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) | trees\hard\99Recover_bst.cpp |
 | 114 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/) | greedy\455Assign_cookies.cpp |
+| 115 | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | graphs\547Number_of_provinces.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
