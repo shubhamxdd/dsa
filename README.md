@@ -123,6 +123,7 @@
 | 114 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/) | greedy\455Assign_cookies.cpp |
 | 115 | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | graphs\547Number_of_provinces.cpp |
 | 116 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | graphs\994Rotting_oranges.cpp |
+| 117 | [First negative in every window of size k](https://www.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1) | sliding-window\firstNegativeNumber.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
