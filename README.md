@@ -122,6 +122,7 @@
 | 113 | [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) | trees\hard\99Recover_bst.cpp |
 | 114 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/) | greedy\455Assign_cookies.cpp |
 | 115 | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | graphs\547Number_of_provinces.cpp |
+| 116 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | graphs\994Rotting_oranges.cpp |
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
