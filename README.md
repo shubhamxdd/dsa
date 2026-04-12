@@ -124,6 +124,8 @@
 | 115 | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | graphs\547Number_of_provinces.cpp |
 | 116 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | graphs\994Rotting_oranges.cpp |
 | 117 | [First negative in every window of size k](https://www.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1) | sliding-window\firstNegativeNumber.cpp |
+| 118 | [Count distinct elements in every window](https://www.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1) | sliding-window\Count_distinct_elements_in_every_window.cpp |
+
 
 ## Other files (not mapped to a single LeetCode problem)
 - array_ques/matrix.cpp
