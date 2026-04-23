@@ -125,6 +125,7 @@
 | 116 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | graphs\994Rotting_oranges.cpp |
 | 117 | [First negative in every window of size k](https://www.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1) | sliding-window\firstNegativeNumber.cpp |
 | 118 | [Count distinct elements in every window](https://www.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1) | sliding-window\Count_distinct_elements_in_every_window.cpp |
+| 119 | [Frog Jump](https://www.naukri.com/code360/problems/frog-jump_3621012) | dp\frog_jump.cpp |
 
 
 ## Other files (not mapped to a single LeetCode problem)
