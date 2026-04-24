@@ -126,6 +126,8 @@
 | 117 | [First negative in every window of size k](https://www.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1) | sliding-window\firstNegativeNumber.cpp |
 | 118 | [Count distinct elements in every window](https://www.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1) | sliding-window\Count_distinct_elements_in_every_window.cpp |
 | 119 | [Frog Jump](https://www.naukri.com/code360/problems/frog-jump_3621012) | dp\frog_jump.cpp |
+| 120 | [Largest subarray with 0 sum](https://www.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1) | prefixsum\largestSubarrSumZero.cpp |
+| 121 | [Longest Subarray with Sum K](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1) | prefixsum\longestSubarrSumK.cpp |
 
 
 ## Other files (not mapped to a single LeetCode problem)
