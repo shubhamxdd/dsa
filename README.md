@@ -130,6 +130,7 @@
 | 121 | [Longest Subarray with Sum K](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1) | prefixsum\longestSubarrSumK.cpp |
 | 122 | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | prefixsum\subarrSumDivK.cpp |
 | 123 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | prefixsum\rangeSumQuery.cpp |
+| 124 | [Ninja’s Training](https://www.naukri.com/code360/problems/ninja-s-training_3621003?leftPanelTabValue=PROBLEM) | - |
 
 
 ## Other files (not mapped to a single LeetCode problem)
